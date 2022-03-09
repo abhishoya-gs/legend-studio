@@ -146,6 +146,9 @@ const transformBigQueryDatasourceSpecification = (
   const source = new V1_BigQueryDatasourceSpecification();
   source.projectId = metamodel.projectId;
   source.defaultDataset = metamodel.defaultDataset;
+  source.proxyHost = metamodel.proxyHost;
+  source.proxyPort = metamodel.proxyPort;
+  source.rootUrl = metamodel.rootUrl;
   return source;
 };
 

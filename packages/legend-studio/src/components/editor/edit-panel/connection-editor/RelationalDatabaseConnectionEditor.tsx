@@ -658,6 +658,30 @@ const BigQueryDatasourceSpecificationEditor = observer(
             sourceSpec.setDefaultDataset(value ?? '')
           }
         />
+        <ConnectionEditor_StringEditor
+          isReadOnly={isReadOnly}
+          value={sourceSpec.proxyHost}
+          propertyName="proxy host"
+          update={(value: string | undefined): void =>
+            sourceSpec.setProxyHost(value)
+          }
+        />
+        <ConnectionEditor_StringEditor
+          isReadOnly={isReadOnly}
+          value={sourceSpec.proxyPort}
+          propertyName="proxy port"
+          update={(value: string | undefined): void =>
+            sourceSpec.setProxyPort(value)
+          }
+        />
+        <ConnectionEditor_StringEditor
+          isReadOnly={isReadOnly}
+          value={sourceSpec.rootUrl}
+          propertyName="root url"
+          update={(value: string | undefined): void =>
+            sourceSpec.setRootUrl(value)
+          }
+        />
       </>
     );
   },

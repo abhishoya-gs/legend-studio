@@ -204,6 +204,9 @@ const bigqueryDatasourceSpecificationModelSchema = createModelSchema(
     _type: usingConstantValueSchema(V1_DatasourceSpecificationType.BIGQUERY),
     defaultDataset: primitive(),
     projectId: primitive(),
+    proxyHost: optional(primitive()),
+    proxyPort: optional(primitive()),
+    rootUrl: optional(primitive()),
   },
 );
 
